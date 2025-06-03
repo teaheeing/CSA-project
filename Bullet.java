@@ -1,29 +1,10 @@
-public class Bullet extends Sprite{
-   int width = 10;
-   int height = 10;
-    
-    public Bullet(int xPosition, int yPosition){
-        super(xPosition, yPosition, 20, "bullet.png");
+public class Bullet extends Sprite {
+    private int speed = 5; // 속도 조정 (너무 빠르면 충돌 판정이 안 됨)
+
+    public Bullet(int x, int y) {
+        super(x, y, 2, 5, "bullet.png");
     }
 
-    public boolean hit(Player p){;
-        //finish this code pls
-
-        return false; //ignore this
-    }
-    public int getWidth() {
-      return width;
-    }
-    public int getHeight() {
-      return height;
-    }
-
-    @Override
-    public void updateY(int dy) {
-        setY(getY() + dy);
-        System.out.println("Bullet:" + getY());
-
-    }
-
-
+    public int getSpeed() { return speed; }
+    public void updateY(int y) { super.updateY(y); }
 }
