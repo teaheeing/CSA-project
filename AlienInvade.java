@@ -11,6 +11,7 @@ public class AlienInvade implements KeyListener {
     Player player = new Player(LOGICAL_WIDTH / 2, 10);
     private int time = 0;
     private int score = 0;
+    //line 15-17 is AI-written code: https://chatgpt.com/share/683f10b3-5420-8013-8580-801c82519bac
     private JFrame frame;
     private JLabel hpLabel;
     private JLabel scoreLabel;
@@ -24,7 +25,7 @@ public class AlienInvade implements KeyListener {
         int y = LOGICAL_HEIGHT - 10;
         return new Alien(x, y, 1);
     }
-
+    //draw function is revised code of AI-written code: https://chatgpt.com/share/683f10b3-5420-8013-8580-801c82519bac
     public void draw(Graphics g, int width, int height) {
         ImageObserver observer = (ImageObserver) frame.getContentPane();
         int px = (int)(player.getX() / (double)LOGICAL_WIDTH * width);
