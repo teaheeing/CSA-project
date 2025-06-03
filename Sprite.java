@@ -4,41 +4,42 @@ import javax.swing.ImageIcon;
 public class Sprite {
     private int xPosition;
     private int yPosition;
-    private int size;
+    private int width;
+    private int height;
     private Image spriteImage;
 
-    public Sprite(int xPosition, int yPosition, int size, String imageName){
+    public Sprite(int xPosition, int yPosition, int width, int height, String imageName) {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
-        this.size = size;
-        this.spriteImage = new ImageIcon("src/"+imageName).getImage();
+        this.width = width;
+        this.height = height;
+        this.spriteImage = new ImageIcon(imageName).getImage();
     }
 
-    public int getX(){
+    public int getX() {
         return xPosition;
     }
-    public int getY(){
+    public int getY() {
         return yPosition;
     }
-    public int getSize(){
-        return size;
+    public int getWidth() {
+        return width;
     }
-    public Image getSpriteImage(){
+    public int getHeight() {
+        return height;
+    }
+    public Image getSpriteImage() {
         return spriteImage;
     }
 
-
-    public void setX(int xPosition){
+    public void updateX(int xPosition) {
         this.xPosition = xPosition;
     }
-    public void setY(int yPosition){
+    public void updateY(int yPosition) {
         this.yPosition = yPosition;
     }
-
-    public void updateY(int dy){
-    }
-
-    public void updateSpriteImage(String imageName){
-        this.spriteImage = new ImageIcon("src/"+imageName).getImage();
+    public void updateSpriteImage(String imageName) {
+        this.spriteImage = new ImageIcon(imageName).getImage();
     }
 }
+
